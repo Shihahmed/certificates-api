@@ -20,7 +20,7 @@ export class UsersService {
     return this.dbService.user.findMany();
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return this.dbService.user.findFirst({
       where: {
         id,
@@ -28,7 +28,7 @@ export class UsersService {
     });
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
+  update(id: string, updateUserDto: UpdateUserDto) {
     return this.dbService.user.update({
       where: {
         id,
@@ -37,7 +37,7 @@ export class UsersService {
     });
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.dbService.user.delete({
       where: {
         id,

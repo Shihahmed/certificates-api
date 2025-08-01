@@ -1,6 +1,5 @@
-export class User {
+export class Student {
   id: string;
-  email: string;
   name: string;
   createdAt: Date;
   updatedAt: Date;

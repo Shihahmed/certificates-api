@@ -1,7 +1,7 @@
-export class User {
+export class Certificate {
   id: string;
-  email: string;
   name: string;
+  structure: string;
   createdAt: Date;
   updatedAt: Date;
 }

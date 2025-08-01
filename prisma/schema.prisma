@@ -15,9 +15,32 @@ datasource db {
 }
 
 model User {
-  id      Int      @id @default(autoincrement())
+  id      String   @id @default(uuid())
   email   String   @unique
   name    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Certificate {
+  id      String   @id @default(uuid())
+  name    String
+  structure String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Student {
+  id      String   @id @default(uuid())
+  name    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model StudentCertificate {
+  id      String   @id @default(uuid())
+  studentId String
+  certificateId String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
